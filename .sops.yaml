@@ -1,0 +1,9 @@
+keys:
+  - &user_craig age1hqhcgq5eqj943rx5dca62kaj0au8k6tc2m7gg3cfdsrqe6kd5e6sqawak4
+  - &host_defiant age1z7qr4h858y25kshhe204dfknpsfm96rzk6gut80vw9fxxlxl2q4qty0h0d
+creation_rules:
+  - path_regex: secrets/shared.yaml
+    key_groups:
+      - age:
+          - *user_craig
+          - *host_defiant
