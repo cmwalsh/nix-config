@@ -54,6 +54,7 @@
       vim
       micro
       fresh-editor
+      marksman
       nixd
       nil
       nixpkgs-fmt

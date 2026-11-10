@@ -111,7 +111,7 @@
     settings = {
       theme = "Japanesque";
       font-family = "JetBrainsMono Nerd Font";
-      window-width = 100;
+      window-width = 120;
       window-height = 40;
     };
   };
