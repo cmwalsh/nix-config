@@ -63,6 +63,40 @@
       sops
       age
       ssh-to-age
+
+      # Common Linux diagnostic / utility tools.
+      pciutils          # lspci — enumerate PCI(e) devices
+      usbutils          # lsusb — enumerate USB devices
+      lshw              # lshw — detailed hardware inventory
+      inxi              # inxi — consolidated system/hardware summary
+      util-linux        # lsblk, blkid, fdisk, dmesg, etc.
+      procps            # ps, top, free, vmstat, pidof, etc.
+      kmod              # lsmod, modprobe, modinfo — kernel modules
+      iproute2          # ip, ss — network interface/routing/socket tools
+      ethtool           # ethtool — NIC/link diagnostics
+      dmidecode         # dmidecode — BIOS/board/memory info (DMI)
+      smartmontools     # smartctl — SMART disk health + tests
+      hdparm            # hdparm/sdparm — disk param & benchmark
+      ncdu              # ncdu — interactive disk usage (NCurses)
+      dust              # dust (formerly du-dust) — fast disk usage overview
+      file              # file — identify file types
+      tree              # tree — directory listing
+      lsof              # lsof — list open files (already in coreutils? keep explicit)
+      strace            # strace — syscall tracing
+      tcpdump           # tcpdump — packet capture
+      dnsutils          # dig, nslookup, host — DNS lookups
+      unzip             # unzip/zip — archive handling
+      zip
+      gzip
+      unar              # unar/lsar — extract many archive formats
+      rsync             # rsync — file sync/copy
+      openssh           # ssh, scp, sftp client
+      coreutils-full    # full coreutils (e.g. numfmt, tsort, etc.)
+      gnused
+      gnugrep
+      gawk
+      findutils
+      which
     ];
 
     variables = {
