@@ -32,8 +32,11 @@
           connection = {
             id = "lan";
             type = "ethernet";
-            interface-name = "enp5s0";
             autoconnect = true;
+          };
+
+          ethernet = {
+            mac-address = "74:56:3c:29:dd:6d";
           };
 
           ipv4 = {

@@ -11,6 +11,7 @@
   # Enable hardware-accelerated video.
   hardware.graphics = {
     enable = true;
+    enable32Bit = true;
   };
 
   # Load amdgpu early so it's available for KMS.
