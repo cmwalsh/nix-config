@@ -69,6 +69,23 @@
             sops-nix.nixosModules.sops
           ];
         };
+
+        # Local AI server (Intel i5-13500 + AMD Radeon RX 9070 XT)
+        jarvis = nixpkgs.lib.nixosSystem {
+          inherit system;
+
+          specialArgs = {
+            inherit inputs;
+            pkgs-unstable = pkgs-unstable;
+          };
+
+          modules = [
+            ./hosts/jarvis
+            { nixpkgs.pkgs = pkgs-stable; }
+            disko.nixosModules.disko
+            sops-nix.nixosModules.sops
+          ];
+        };
       };
     };
 }
