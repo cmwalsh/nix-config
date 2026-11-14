@@ -49,8 +49,8 @@
       ];
 
       extraOptions = [
-        "--group-add" "video"
-        "--group-add" "render"
+        "--group-add" (toString config.users.groups.video.gid)
+        "--group-add" (toString config.users.groups.render.gid)
         "--ulimit" "memlock=-1:-1"
         "--shm-size" "2g"
         "--stop-timeout" "120"
