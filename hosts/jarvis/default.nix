@@ -4,10 +4,14 @@
   imports = [
     ./disk.nix
     ./hardware.nix
+
     ../../nixos/common
     ../../nixos/common/sops.nix
+
     ../../nixos/services/ssh.nix
+    ../../nixos/services/podman.nix
     # ../../nixos/services/netdata.nix
+
     ../../nixos/containers/strata.nix
   ];
 
