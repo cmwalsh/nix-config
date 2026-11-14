@@ -14,6 +14,10 @@
     };
   };
 
+  systemd.tmpfiles.rules = [
+    "d /data/strata 0755 root root -"
+  ];
+
   virtualisation.oci-containers = {
     backend = "podman";
 
