@@ -4,8 +4,10 @@
   # The Strata API key, rendered as an env file (`API_KEY=...`) from the sops
   # `strata_api_key` secret.
   sops = {
-    "strata_api_key" = {
-      sopsFile = ../../secrets/jarvis.yaml;
+    secrets = {
+      "strata_api_key" = {
+        sopsFile = ../../secrets/jarvis.yaml;
+      };
     };
 
     templates."strata-env" = {
