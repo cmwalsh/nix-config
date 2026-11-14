@@ -111,6 +111,7 @@
     settings = {
       theme = "Japanesque";
       font-family = "JetBrainsMono Nerd Font";
+      term = "xterm-256color";
       window-width = 120;
       window-height = 40;
     };

@@ -1,18 +1,15 @@
 { config, ... }:
 
 {
-  # The Strata API key, rendered as an env file (`API_KEY=...`) from the sops
-  # `strata_api_key` secret.
   sops = {
-    secrets = {
-      "strata_api_key" = {
-        sopsFile = ../../secrets/jarvis.yaml;
-      };
+    secrets.strata-api-key = {
+      sopsFile = ../../secrets/jarvis.yaml;
+      key = "strata_api_key";
     };
 
     templates."strata-env" = {
       content = ''
-        API_KEY={{ .strata_api_key }}
+        API_KEY=${config.sops.placeholder.strata-api-key}
       '';
     };
   };
@@ -35,7 +32,7 @@
       ];
 
       volumes = [
-        "/models/strata:/data"
+        "/data/strata:/data"
       ];
 
       environment = {
