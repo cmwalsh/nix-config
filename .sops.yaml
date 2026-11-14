@@ -7,3 +7,8 @@ creation_rules:
       - age:
           - *user_craig
           - *host_defiant
+  - path_regex: secrets/jarvis.yaml
+    key_groups:
+      - age:
+          - *user_craig
+          - *host_defiant

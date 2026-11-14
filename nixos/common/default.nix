@@ -97,6 +97,7 @@
       gawk
       findutils
       which
+      openssl
     ];
 
     variables = {
