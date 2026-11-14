@@ -2,12 +2,17 @@
 
 {
   # The Strata API key, rendered as an env file (`API_KEY=...`) from the sops
-  # `strata_api_key` secret. `environmentFiles` below passes it to the container
-  # via `--env-file`, keeping the key out of the Nix store and process list.
-  sops.templates."strata-env" = {
-    content = ''
-      API_KEY={{ .strata_api_key }}
-    '';
+  # `strata_api_key` secret.
+  sops = {
+    "strata_api_key" = {
+      sopsFile = ../../secrets/jarvis.yaml;
+    };
+
+    templates."strata-env" = {
+      content = ''
+        API_KEY={{ .strata_api_key }}
+      '';
+    };
   };
 
   virtualisation.oci-containers = {

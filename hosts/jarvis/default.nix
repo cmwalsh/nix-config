@@ -8,6 +8,7 @@
     ../../nixos/common/sops.nix
     ../../nixos/services/ssh.nix
     # ../../nixos/services/netdata.nix
+    ../../nixos/containers/strata.nix
   ];
 
   # Bootloader
