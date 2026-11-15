@@ -42,18 +42,6 @@
         metrics = false;
         diagnostics = false;
       };
-
-      language_models.openai = {
-        api_url = "http://192.168.3.10:8080/v1";
-
-        available_models = [
-          {
-            name = "qwen";
-            display_name = "Strata Qwen3.8-Flash-Next";
-            max_tokens = 32768;
-          }
-        ];
-      };
     };
   };
 
