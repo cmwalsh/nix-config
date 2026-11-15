@@ -13,6 +13,7 @@
     # ../../nixos/services/netdata.nix
 
     ../../nixos/containers/strata.nix
+    ../../nixos/containers/open-webui.nix
   ];
 
   # Bootloader
