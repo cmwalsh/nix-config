@@ -64,4 +64,7 @@
     after = [ "sops-install-secrets.service" ];
     requires = [ "sops-install-secrets.service" ];
   };
+
+  # Allow the Strata API (port 8080) from the LAN.
+  networking.firewall.allowedTCPPorts = [ 8080 ];
 }

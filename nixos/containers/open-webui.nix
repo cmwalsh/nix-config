@@ -41,4 +41,7 @@
     after = [ "sops-install-secrets.service" ];
     requires = [ "sops-install-secrets.service" ];
   };
+
+  # Allow the Open WebUI web interface (port 3000) from the LAN.
+  networking.firewall.allowedTCPPorts = [ 3000 ];
 }
