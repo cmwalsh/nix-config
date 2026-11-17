@@ -32,7 +32,13 @@
       };
 
       # The upstream API key (Strata's key), rendered from sops.
-      environmentFiles = [ config.sops.templates."open-webui-env".path ];
+      environmentFiles = [
+        config.sops.templates."open-webui-env".path
+      ];
+
+      labels = {
+        "io.containers.autoupdate" = "registry";
+      };
     };
   };
 

@@ -41,7 +41,8 @@
 
       environment = {
         FAMILY = "qwen";
-        MODEL = "IQ3_XXS";
+        MODEL = "IQ3_S";
+        CONTEXT = "64k";
       };
 
       environmentFiles = [
@@ -55,6 +56,10 @@
         "--shm-size" "2g"
         "--stop-timeout" "120"
       ];
+
+      labels = {
+        "io.containers.autoupdate" = "registry";
+      };
     };
   };
 
